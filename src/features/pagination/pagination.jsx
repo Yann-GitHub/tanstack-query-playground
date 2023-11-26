@@ -8,7 +8,7 @@ import PageButton from '../../components/PageButton'
 
 
 const UserListPaginated = () => {
-    const [page, setPage] = useState(1)
+    const [page, setPage] = useState(1) // pagination number
 
     const {
         isLoading, // used when the data is fetched for the first time
@@ -49,11 +49,11 @@ const UserListPaginated = () => {
     )
 
     return (
-        <>
+        <div className='wrapper'>
             {nav}
             {isFetching && <span className="loading">Loading...</span>}
             {content}
-        </>
+        </div>
     )
 }
 export default UserListPaginated

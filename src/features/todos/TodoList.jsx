@@ -7,7 +7,7 @@ import { faTrash, faUpload } from "@fortawesome/free-solid-svg-icons"
 import { useState } from 'react'
 
 const TodoList = () => {
-    const [newTodo, setNewTodo] = useState('')
+    const [newTodo, setNewTodo] = useState('') // input newTodo
     const queryClient = useQueryClient() // Useful for invalidateQueries and refetch data
 
     const {
@@ -78,6 +78,7 @@ const TodoList = () => {
     )
 
     let content
+    
     if (isLoading) {
         content = <p>Loading...</p>
     } else if (isError) {
